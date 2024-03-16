@@ -1,0 +1,65 @@
+
+#text,#textContainer,#fileInput,#startPrompt
+{
+    position: absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+#text{
+    font-size: 250%;
+}
+
+#fileInput
+{
+position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+/* Light mode styles */
+#bodyMode {
+    background-color: #ffffff;
+    color: #000000;
+}
+@media (prefers-color-scheme: dark) {
+    #bodyMode {
+        background-color: black;
+        color: white;
+    }
+}
+
+#startPrompt
+{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);   
+}
+
+/* Dark mode styles */
+
+#toggleMode {
+    position: relative;
+    width: 60px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    border-radius: 15px; /* Half of the height to create a circular button */
+    border: none;
+    outline: none; /* Remove default button outline */
+    cursor: pointer;
+    left:90%;
+}
+
+#toggleMode::before {
+    content: '';
+    position: absolute;
+    width: 20px; /* Width of the circle */
+    height: 20px; /* Height of the circle */
+ ; /* Smooth transition for animation */
+}
+
+#toggleMode:active::before {
+    width: 30px; /* Increase width on active state */
+    left:100%;
+}
