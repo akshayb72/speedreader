@@ -13,20 +13,27 @@
 <body id="bodyMode">
     
     <div id="textContainer">
-
     <p id="text">
-        1
+        Start Reading
     </p>
     </h1>
     
     </div>
+    <div id="wpm">
+        <form action="">
+            <input type="number" name="" id="">   
+           <input type="submit" value="submit" id=""> 
+           </form>
+    </div>
+
     <div id="fileInput">
         <form action="">
-         <input type="file" name="" id="">   
-        <input type="submit" value="submit" id=""> 
+            <textarea id="areaText" rows="5" cols="50"></textarea>   
+            <input type="submit" value="submit" id=""> 
         </form>
     </div>
-    <div id = "">
+    
+    <div id = "toggleMode">
         <button type="button" value="" onclick="toggleDarkmode()" id="toggleMode">
         <svg width="30" height="30">
             <path
@@ -37,6 +44,7 @@
                 A 12 12 0 0 1 23, 5"
             />
           </svg>
+          
         <svg width="30" height="30">
             <circle cx="15" cy="15" r="6" fill="currentColor" />
           
@@ -59,10 +67,11 @@
             <use href="#ray" transform="rotate(315 15 15)" />
           </svg>
           </button>
-        </div>
+    </div>
+
     <div id="startPrompt">
     <input type="button" value="start" onclick="readPrompt()" id="start">
-   
-</div>
+    </div>
+
 </body>
 </html>
