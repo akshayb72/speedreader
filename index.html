@@ -22,37 +22,25 @@
     <div id="wpm">
         <form onsubmit="">
         <label>WPM</label>
-        <input type="number" name="wpm" id="numField">   
+        <input type="number" name="wpm" id="numField" placeholder="120">   
 
         <input type="submit" value="submit" id="sub"> 
         </form>
     </div>
 
     <div id="fileInput">
-        <form action="">
             <textarea id="areaText" rows="5" cols="50"></textarea>   
-            <input type="submit" value="submit" id=""> 
-        </form>
+           
+                <input type="button" value="Start" onclick="readPrompt()" id="start">
+                <button id="pause" onclick="togglePause()">
+                    Pause</button>             
     </div>
     
     <div id = "toggleBox">
         <button type="button" value="" onclick="toggleDarkmode()" id="toggleMode">
-            <svg width="30" height="30">
-                <path
-                  fill="currentColor"
-                  d="
-                    M 23, 5
-                    A 12 12 0 1 0 23, 25
-                    A 12 12 0 0 1 23, 5"
-                />
-              </svg>
+         
              
           </button>
     </div>
-
-    <div id="startPrompt">
-    <input type="button" value="start" onclick="readPrompt()" id="start">
-    </div>
-
 </body>
 </html>
