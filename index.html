@@ -6,8 +6,7 @@
 <title>
     SpeedReading
 </title>
-<script type="text/javascript" src="script.js">
-    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="bodyMode">
@@ -20,20 +19,19 @@
     
     </div>
     <div id="wpm">
-        <form onsubmit="">
-        <label>WPM</label>
-        <input type="number" name="wpm" id="numField" placeholder="120">   
-
-        <input type="submit" value="submit" id="sub"> 
-        </form>
+           <label>WPM:</label> <input type="number" name="wpm" id="numField" placeholder="120">   
     </div>
 
+    
+<div id="controls">
+    <input type="button" value="Start" onclick="startReading()" id="start">
+    <button id="stop" onclick="stopReading()">Stop</button>
+    <button id="pause" onclick="togglePause()">Pause</button>    
+    </div>
     <div id="fileInput">
-            <textarea id="areaText" rows="5" cols="50"></textarea>   
-           
-                <input type="button" value="Start" onclick="readPrompt()" id="start">
-                <button id="pause" onclick="togglePause()">
-                    Pause</button>             
+        <label>Text To be Read:</label>
+         
+            <textarea id="areaText"></textarea>   
     </div>
     
     <div id = "toggleBox">
@@ -42,5 +40,7 @@
              
           </button>
     </div>
+    <script type="text/javascript" src="script.js">
+    </script>
 </body>
 </html>
