@@ -3,10 +3,12 @@ console.log("Happy Hunting");
 let mode = false;
 const text = document.getElementById('text');
 let time = 60000;
-let wpm = 120;
+let wpm = 100;
+document.getElementById("numField").value = 120;
 
+let temp = 0;
 let index = 0; 
-let paused = false;
+let interval;
 
 
 function lightMode() 
@@ -93,7 +95,6 @@ function toggleDarkmode() {
     }
 }
 
-
 function darkMode()
 {
     const toggle = document.getElementById('toggleMode');
@@ -113,39 +114,50 @@ function darkMode()
 
 }
 
-function getWPMvalue(event)
-
+function startReading() 
 {
-event.preventDefault();
 
-}
+    var text = document.getElementById("areaText").value.trim(); 
+    var words = text.split(/\s+/); 
+    var wpm = parseInt(document.getElementById("numField").value); 
+    var delay = 60000 / wpm; 
+    
+    //console.log(wpm);
 
-function togglePause() {
-    paused = !paused; // Toggle pause state
-}
-
-function readPrompt() {
-
-    const textArea = document.getElementById("areaText");
-    const text = textArea.value.split(/\s+/);
-
-    const paragraph = document.getElementById("text"); 
-
-    function writeWord() {
-        if (index < text.length) {
-            const word = text[index];
-            const span = document.createElement("span");
-            span.textContent = word;
-
-            paragraph.textContent = '';
-
-            paragraph.appendChild(span);
-
+    interval = setInterval(function() {
+        if (index < words.length) {
+            document.getElementById("text").textContent = words[index];
             index++; 
-
-            setTimeout(writeWord, 60000/wpm); 
+        } else if(index >= words.length){
+            clearInterval(interval);
+            index=0;
+            document.getElementById("text").textContent ="Start Reading";
         }
+    }, delay);
+}
+
+function togglePause() 
+{
+
+    if (interval) {
+        clearInterval(interval);
+        interval = null; 
+        document.getElementById("pause").textContent = "Resume"; 
     }
-    //console.log("wpm",wpm);
-    writeWord();
+
+    else {
+        startReading(); 
+        document.getElementById("pause").textContent = "Pause"; 
+    }
+
+}
+
+function stopReading() 
+{
+
+    clearInterval(interval); 
+    index = 0; 
+    document.getElementById("text").textContent = "Start Reading"; 
+    document.getElementById("pause").textContent = "Pause"; 
+
 }
