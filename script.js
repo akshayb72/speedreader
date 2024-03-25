@@ -198,3 +198,4 @@ function goTo()
 
     }
 }
+//Word Length and percentage function
