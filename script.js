@@ -207,4 +207,17 @@ function goTo()
 
     }
 }
+function altPressedpauses(event)
+{
+    if(event.altKey && event.ctrlKey)
+    {
+        togglePause();
+    }
+    else
+    {
+
+    }
+}
+
+document.addEventListener('keydown',altPressedpauses);
 //Word Length and percentage function
