@@ -6,7 +6,6 @@
 <title>
     SpeedReading
 </title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="bodyMode">
@@ -15,36 +14,27 @@
     <p id="text">
         Start Reading
     </p>
-    </h1>
-    
+    </h1>    
     </div>
     <div id="wpm">
            <label>WPM:</label> <input type="number" name="wpm" id="numField" placeholder="120">   
-    </div>
-
-    
+    </div>   
 <div id="controls">
     <input type="button" value="Start" onclick="startReading()" id="start">
     <button id="stop" onclick="stopReading()">Stop</button>
     <button id="pause" onclick="togglePause()">Pause</button>    
     </div>
     <div id="fileInput">
-        <label>Text To be Read:</label>
-         
-            <textarea id="areaText"></textarea>   
-    </div>
-    
+        <label>Text To be Read:</label>       
+        <textarea id="areaText"></textarea>   
+    </div>    
     <div id = "toggleBox">
-        <button type="button" value="" onclick="toggleDarkmode()" id="toggleMode">
-         
-             
-          </button>
+        <button type="button" value="" onclick="toggleDarkmode()" id="toggleMode"></button>
     </div>
     <div id="index">
-        <span for="indexCurrent" >Current Index: <p id="indexCurrent">0</p></span>
+        <label for="indexCurrent" >Current Index: <p id="indexCurrent">0</p></label>
         <input type="number" value="" id = "indexIn">
         <input type="button" value="Goto" id="goTo" onclick="goTo()">
-
     </div>
     <script type="text/javascript" src="script.js">
     </script>
