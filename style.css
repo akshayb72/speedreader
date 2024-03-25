@@ -6,8 +6,16 @@
     left:50%;
     transform: translate(-50%,-50%);
 }
-
-#text{
+#textContainer
+{
+    position: absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 1000px;
+}
+#text
+{
     font-size: 250%;
 }
 
@@ -29,7 +37,7 @@ position: absolute;
         transform: translate(-50%,-50%);
         
 }
-/* Light mode styles */
+
 #bodyMode {
     background-color: #ffffff;
     color: #000000;
@@ -49,7 +57,6 @@ position: absolute;
     transform: translate(-50%,-50%);   
 }
 
-/* Dark mode styles */
 
 #toggleMode{
     position: relative;
@@ -74,12 +81,24 @@ position: absolute;
 
 #areaText
 {
-    height: 100px;
+    height: 115px;
     width: 200px;
     border-radius: 5%;
     resize: none;
 }
 
+#index
+{
+    position: absolute;
+    top:70%;
+    left : 85%;
+    transform: translate(-50%,-50%);
+}
+
+#indexCurrent
+{
+    display: inline-block;
+}
 
 #wpm
 {
@@ -102,7 +121,6 @@ position: absolute;
 top:200%;
 left:50%;
 transform: translate(-50%,-50%);
-
 }
 
 #fileSub
@@ -118,7 +136,6 @@ transform: translate(-50%,-50%);
 {
 width: 55px;
 height: 30px;
-
 position: absolute;
 top:140%;
 left:20%;
@@ -127,9 +144,8 @@ transform: translate(-50%,-50%);
 
 #pause
 {
-    width: 50px;
+    width: 65px;
     height: 30px;
-
     position: absolute;
     top:140%;
     left:50%;
@@ -139,7 +155,6 @@ transform: translate(-50%,-50%);
 {
     width: 50px;
     height: 30px;
-
     position: absolute;
     top:140%;
     left:80%;
