@@ -185,7 +185,7 @@ function goTo()
     interval=null;
     if(document.getElementById("pause").textContent === "Resume")
     {
-        document.getElementById("pause").value = "Pause";
+        document.getElementById("pause").textContent = "Pause";
         startReading();     
 
     }
