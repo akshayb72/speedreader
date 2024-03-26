@@ -160,3 +160,28 @@ transform: translate(-50%,-50%);
     left:80%;
     transform: translate(-50%,-50%);  
 }
+
+#wordCount
+{
+    display: inline-block;
+}
+
+label {
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+#goTo
+{
+ margin-top: 15px;
+ margin-left: 30px;
+}
+
+#indexIn
+{
+    width:100px;
+}
+#progress
+{
+    display:inline-block;
+}
