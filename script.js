@@ -206,7 +206,7 @@ function goTo()
     }
 }
 
-function altPressedpauses(event)
+function f2Pause(event)
 {
   if(event.key === 'F2')
     {
@@ -216,5 +216,5 @@ function altPressedpauses(event)
     {
     }
 }
-document.addEventListener('keydown',altPressedpauses);
+document.addEventListener('keydown',f2Pause);
 //Word Length and percentage function
