@@ -1,4 +1,3 @@
-
 #text,#textContainer,#fileInput,#startPrompt
 {
     position: absolute;
@@ -90,7 +89,7 @@ position: absolute;
 #index
 {
     position: absolute;
-    top:70%;
+    top:65%;
     left : 85%;
     transform: translate(-50%,-50%);
 }
@@ -103,8 +102,8 @@ position: absolute;
 #wpm
 {
     position: absolute;
-    top:70%;
-    left:65%;
+    top:50%;
+    left:82%;
     transform: translate(-50%,-50%);
 }
 
