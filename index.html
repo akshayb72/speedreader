@@ -31,11 +31,15 @@
     <div id = "toggleBox">
         <button type="button" value="" onclick="toggleDarkmode()" id="toggleMode"></button>
     </div>
+
     <div id="index">
-        <label for="indexCurrent" >Current Index: <p id="indexCurrent">0</p></label>
-        <input type="number" value="" id = "indexIn">
-        <input type="button" value="Goto" id="goTo" onclick="goTo()">
+        <label for="wordCount">Word Count: <p id="wordCount">0</p> </label>  
+        <label for="progress">Progress: <p id="progress">0</p> </label> 
+        <label for="indexCurrent">Current: <p id="indexCurrent">0</p></label>        
+        <input type="number" value="" id="indexIn">
+        <input type="button" value="Go To" id="goTo" onclick="goTo()">
     </div>
+    
     <script type="text/javascript" src="script.js">
     </script>
 </body>
