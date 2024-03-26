@@ -205,6 +205,7 @@ function goTo()
 
     }
 }
+
 function altPressedpauses(event)
 {
   if(event.key === 'F2')
