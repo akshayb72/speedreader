@@ -4,12 +4,15 @@ let mode = false;
 const text = document.getElementById('text');
 let time = 60000;
 let wpm = 100;
-document.getElementById("numField").value = 120;
 
 let temp = 0;
 let index = 0; 
 let interval;
 
+var wordLen = 0;
+
+document.getElementById("numField").value = 120;
+document.getElementById("indexIn").value = 0;
 
 function lightMode() 
 {
@@ -58,6 +61,7 @@ function setInitialImage() {
         darkMode();
     }
 }
+
 window.onload = setInitialImage;
 
 function toggleDarkmode() {
@@ -116,19 +120,37 @@ function darkMode()
 
 function startReading() 
 {
-
     var text = document.getElementById("areaText").value.trim(); 
     var words = text.split(/\s+/); 
     var wpm = parseInt(document.getElementById("numField").value); 
     var delay = 60000 / wpm; 
-    
+    wordLen = words.length;
+    document.getElementById("wordCount").textContent = wordLen;   
+
     //console.log(wpm);
 
     interval = setInterval(function() {
         if (index < words.length) {
-            document.getElementById("text").textContent = words[index];
-            index++; 
-        } else if(index >= words.length){
+            //one word at a time
+            if(words[index].length < 5 ) //replace word with min word length and may be  add max word length
+            {
+                document.getElementById("text").textContent = words[index]+" "+words[index+1];
+                index = index + 2; 
+                document.getElementById("indexCurrent").textContent=index;
+                document.getElementById("indexIn").value=index;
+                document.getElementById("progress").textContent = index+"/"+wordLen;
+            }
+            else
+            {
+                document.getElementById("text").textContent = words[index];
+                index++; 
+                document.getElementById("indexCurrent").textContent=index;
+                document.getElementById("indexIn").value=index;
+                document.getElementById("progress").textContent = index+"/"+wordLen;
+            }
+
+        } 
+        else if(index >= words.length){
             clearInterval(interval);
             index=0;
             document.getElementById("text").textContent ="Start Reading";
@@ -161,3 +183,40 @@ function stopReading()
     document.getElementById("pause").textContent = "Pause"; 
 
 }
+
+// Text Index and position changing
+
+function goTo()
+{
+    index = document.getElementById("indexIn").value;
+    document.getElementById.value =index;
+//    console.log(index);
+    clearInterval(interval);
+    interval=null;
+    if(document.getElementById("pause").textContent === "Resume")
+    {
+        document.getElementById("pause").textContent = "Pause";
+        startReading();     
+
+    }
+    else if( document.getElementById("pause").textContent === "Pause")
+    {
+        startReading();    
+    }
+    else
+    {
+
+    }
+}
+
+function f2Pause(event)
+{
+  if(event.key === 'F2')
+    {
+        togglePause();
+    }
+    else
+    {
+    }
+}
+document.addEventListener('keydown',f2Pause);
