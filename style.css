@@ -1,9 +1,18 @@
-#text,#textContainer,#fileInput,#startPrompt
+
+#text,#textContainer,#startPrompt
 {
     position: absolute;
     top:30%;
     left:50%;
     transform: translate(-50%,-50%);
+}
+
+#fileInput
+{
+ position: absolute;
+ top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
 }
 #textContainer
 {
@@ -27,6 +36,17 @@ position: absolute;
     transform: translate(-50%,-50%);
     
 }
+#areaText
+{
+    height: 115px;
+    width: 200px;
+    border-radius: 5%;
+    resize: none;
+    position: absolute;
+    top:10%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
 #controls
 {
     width:250px;
@@ -36,6 +56,7 @@ position: absolute;
         transform: translate(-50%,-50%);
         
 }
+
 
 #bodyMode {
     background-color: #ffffff;
@@ -78,13 +99,6 @@ position: absolute;
 
 }
 
-#areaText
-{
-    height: 115px;
-    width: 200px;
-    border-radius: 5%;
-    resize: none;
-}
 
 #index
 {
@@ -102,8 +116,8 @@ position: absolute;
 #wpm
 {
     position: absolute;
-    top:50%;
-    left:82%;
+    top:-25%;
+    left:25%;
     transform: translate(-50%,-50%);
 }
 
@@ -183,4 +197,8 @@ label {
 #progress
 {
     display:inline-block;
+}
+#container
+{
+    border: 2px;
 }
