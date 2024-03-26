@@ -209,15 +209,13 @@ function goTo()
 }
 function altPressedpauses(event)
 {
-    if(event.altKey && event.ctrlKey)
+  if(event.key === 'F2')
     {
         togglePause();
     }
     else
     {
-
     }
 }
-
 document.addEventListener('keydown',altPressedpauses);
 //Word Length and percentage function
