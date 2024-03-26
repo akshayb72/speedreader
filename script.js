@@ -132,7 +132,7 @@ function startReading()
     interval = setInterval(function() {
         if (index < words.length) {
             //one word at a time
-            if(words[index].length < 5 ) //replace word with min word length and may be  add max word length
+            if(words[index].length < 5 && typeof words[index+1] !=='undefined') //replace word with min word length and may be  add max word length
             {
                 document.getElementById("text").textContent = words[index]+" "+words[index+1];
                 index = index + 2; 
