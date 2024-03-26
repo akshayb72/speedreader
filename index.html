@@ -9,37 +9,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="bodyMode">
-    
+    <div id="container">
     <div id="textContainer">
-    <p id="text">
-        Start Reading
-    </p>
-    </h1>    
+    <p id="text">Start Reading</p>   
     </div>
-    <div id="wpm">
-           <label>WPM:</label> <input type="number" name="wpm" id="numField" placeholder="120">   
+  
+    <div id="controls">
+        <input type="button" value="Start" onclick="startReading()" id="start">
+        <button id="stop" onclick="stopReading()">Stop</button>
+        <button id="pause" onclick="togglePause()">Pause</button>    
+        </div>
+    <div id="fileInput" >
+            <textarea id="areaText" placeholder="Text to be Read"></textarea>       
     </div>   
-<div id="controls">
-    <input type="button" value="Start" onclick="startReading()" id="start">
-    <button id="stop" onclick="stopReading()">Stop</button>
-    <button id="pause" onclick="togglePause()">Pause</button>    
-    </div>
-    <div id="fileInput">
-        <label>Text To be Read:</label>       
-        <textarea id="areaText"></textarea>   
-    </div>    
+
     <div id = "toggleBox">
         <button type="button" value="" onclick="toggleDarkmode()" id="toggleMode"></button>
     </div>
 
     <div id="index">
+        <div id="wpm">
+            <label>WPM:</label> <input type="number" name="wpm" id="numField" placeholder="120">   
+     </div>   
         <label for="wordCount">Word Count: <p id="wordCount">0</p> </label>  
         <label for="progress">Progress: <p id="progress">0</p> </label> 
         <label for="indexCurrent">Current: <p id="indexCurrent">0</p></label>        
         <input type="number" value="" id="indexIn">
         <input type="button" value="Go To" id="goTo" onclick="goTo()">
     </div>
-    
+</div>
     <script type="text/javascript" src="script.js">
     </script>
 </body>
