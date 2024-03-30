@@ -10,6 +10,7 @@ let index = 0;
 let interval;
 
 var wordLen = 0;
+var timeTaken = 0 ;
 
 document.getElementById("numField").value = 120;
 document.getElementById("indexIn").value = 0;
@@ -126,7 +127,8 @@ function startReading()
     var delay = 60000 / wpm; 
     wordLen = words.length;
     document.getElementById("wordCount").textContent = wordLen;   
-
+    timeTaken = wordLen/wpm;
+    document.getElementById("min").textContent=timeTaken.toFixed(2);
     //console.log(wpm);
 
     interval = setInterval(function() {
@@ -140,6 +142,7 @@ function startReading()
                 document.getElementById("indexIn").value=index;
                 document.getElementById("progress").textContent = index+"/"+wordLen;
             }
+            
             else
             {
                 document.getElementById("text").textContent = words[index];
@@ -148,8 +151,8 @@ function startReading()
                 document.getElementById("indexIn").value=index;
                 document.getElementById("progress").textContent = index+"/"+wordLen;
             }
-
         } 
+
         else if(index >= words.length){
             clearInterval(interval);
             index=0;
