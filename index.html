@@ -20,7 +20,7 @@
         <button id="pause" onclick="togglePause()">Pause</button>    
         </div>
     <div id="fileInput" >
-            <textarea id="areaText" placeholder="Text to be Read"></textarea>       
+           <p id="areaTextlab">Text to be Read:</p> <textarea id="areaText" placeholder="Text to be Read"></textarea>       
     </div>   
 
     <div id = "toggleBox">
@@ -31,7 +31,8 @@
         <div id="wpm">
             <label>WPM:</label> <input type="number" name="wpm" id="numField" placeholder="120">   
      </div>   
-        <label for="wordCount">Word Count: <p id="wordCount">0</p> </label>  
+        <p id="wpmLab">Word Count: <p id="wordCount">0</p> </p> 
+        <p id="timeTaken">Time Taken(in Minutes):<p id="min">0</p></p>
         <label for="progress">Progress: <p id="progress">0</p> </label> 
         <label for="indexCurrent">Current: <p id="indexCurrent">0</p></label>        
         <input type="number" value="" id="indexIn">
