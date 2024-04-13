@@ -15,7 +15,7 @@
     </div>
   
     <div id="controls">
-        <input type="button" value="Start" onclick="startReading()" id="start">
+        <input type="button" value="Start" onclick="startReading();startTimer();" id="start">
         <button id="stop" onclick="stopReading()">Stop</button>
         <button id="pause" onclick="togglePause()">Pause</button>    
         </div>
@@ -34,6 +34,7 @@
         <p id="wpmLab">Word Count: <p id="wordCount">0</p> </p> 
         <p id="timeTaken">Time Taken(in Minutes):<p id="min">0</p></p>
         <label for="progress">Progress: <p id="progress">0</p> </label> 
+        <label>Actual Time Taken: <p id="timer">00:00:00</p></label>
         <label for="indexCurrent">Current: <p id="indexCurrent">0</p></label>        
         <input type="number" value="" id="indexIn">
         <input type="button" value="Go To" id="goTo" onclick="goTo()">
