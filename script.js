@@ -212,6 +212,34 @@ function goTo()
     }
 }
 
+
+// Total Time Taken
+
+function stopTimer() {
+    clearInterval(timerInterval);
+  }
+
+function startTimer() {
+    startTime = Date.now();
+
+    timerInterval = setInterval(updateTimer, 1000);
+  }
+
+  function updateTimer() {
+    let elapsedTime = Date.now() - startTime;
+
+    let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+    let minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+
+    hours = String(hours).padStart(2, '0');
+    minutes = String(minutes).padStart(2, '0');
+    seconds = String(seconds).padStart(2, '0');
+
+    document.getElementById('timer').textContent = `${hours}:${minutes}:${seconds}`;
+  }
+
+
 function f2Pause(event)
 {
   if(event.key === 'F2')
